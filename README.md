@@ -1,6 +1,6 @@
 # slack_clone
 
-> A Vue.js project
+> A Vue.js + Firebase project
 
 ## Build Setup
 
