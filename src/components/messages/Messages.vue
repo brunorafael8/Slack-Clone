@@ -69,7 +69,7 @@
 <style scoped>
     .messages__container{
         position: relative;        
-        background-color: #2a2a2e;        
+        background-color: #fff;        
         padding: 10px 30px 210px 30px; 
         margin-left: 300px;
         min-height: 100%;

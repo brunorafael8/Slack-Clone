@@ -70,7 +70,7 @@
         background-color:#232323;
         padding: 10px;
         padding-top: 20px;
-        height: 210px;
+        height: 30%;
         left: 300px;
         right: 0;
 }

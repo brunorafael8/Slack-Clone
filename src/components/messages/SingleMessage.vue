@@ -40,7 +40,7 @@
  .comment__container pre{
         font-size: 0.9em;
         background: #232323;
-        box-shadow: 3px 6px 9px 0px #a2a2a2;
+        
     }   
     .comment__self{
         border-left: 10px solid orange;

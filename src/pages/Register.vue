@@ -87,7 +87,7 @@
                     
                     user.updateProfile({
                         displayName: this.name,
-                        photoURL: "https://br.gravatar.com/avatar"+md5(user.email)+"?d=identicon"
+                        photoURL: "http://www.gravatar.com/avatar/"+md5(user.email)+"?d=identicon"
                     }).then ( () => {
 
                         this.saveUsertoUsersRef(user).then( () => {
