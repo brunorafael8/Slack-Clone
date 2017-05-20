@@ -2,13 +2,15 @@
     <div class="sidebar">
         <h1 class="ui inverted center aligned header">Slack Clone</h1> 
         <connected-user></connected-user>
+        <channels></channels>
     </div>
 </template>
 <script>
-    import ConnectedUser from './sidebar/ConnectedUser'
+    import ConnectedUser from './ConnectedUser'
+    import Channels from './Channels'
     export default {
         name: 'sidebar',
-        components: { ConnectedUser }
+        components: { ConnectedUser, Channels }
     }
 </script>
 <style scoped>
@@ -16,7 +18,7 @@
         position: fixed;
         display: flex;
         flex-flow: column nowrap;
-        width: 30%;
+        width: 300px;
         padding: 10px;
         top: 0;
         left: 0;
