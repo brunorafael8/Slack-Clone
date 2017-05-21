@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="field">
-                    <button class="ui green button" @click.prevent="sendMessage">Envoyer</button>
+                    <button class="ui green button" @click.prevent="sendMessage">Send</button>
                     <button class="ui labeled icon button"><i class="cloud upload icon"></i>Fichier</button>
                 </div>
 

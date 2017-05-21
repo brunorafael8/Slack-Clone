@@ -3,14 +3,17 @@
         <h1 class="ui inverted center aligned header">Slack Clone</h1> 
         <connected-user></connected-user>
         <channels></channels>
+        <div class="ui divider"></div>
+        <users></users>
     </div>
 </template>
 <script>
     import ConnectedUser from './ConnectedUser'
     import Channels from './Channels'
+    import Users from './Users'
     export default {
         name: 'sidebar',
-        components: { ConnectedUser, Channels }
+        components: { ConnectedUser, Channels, Users }
     }
 </script>
 <style scoped>
