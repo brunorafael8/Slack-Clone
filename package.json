@@ -12,7 +12,9 @@
   "dependencies": {
     "firebase": "^3.9.0",
     "md5": "^2.2.1",
+    "mime-types": "^2.1.15",
     "moment": "^2.18.1",
+    "uuid": "^3.0.1",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
     "vuex": "^2.3.1"
