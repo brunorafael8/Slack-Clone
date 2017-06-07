@@ -2,20 +2,20 @@
     
     <div class="messages__form">
         <div class="ui inverted form">
+            <form action="" id="form">
+                <div class="two fields">
 
-            <div class="two fields">
+                    <div class="field">
+                        <textarea name="message" @keydown.ctrl.enter.prevent="submit" id="message" v-model.trim="message" rows="3" placeholder="Message"></textarea>
+                    </div>
 
-                <div class="field">
-                    <textarea name="message" id="message" v-model.trim="message" rows="3" placeholder="Message"></textarea>
+                    <div class="field">
+                        <button class="ui green button"  @submit.prevent="sendMessage" @click.prevent="sendMessage">Send</button>
+                        <button class="ui labeled icon button" @click.prevent="openFileModal"><i class="cloud upload icon"></i>Fichier</button>
+                    </div>
+
                 </div>
-
-                <div class="field">
-                    <button class="ui green button" @click.prevent="sendMessage">Send</button>
-                    <button class="ui labeled icon button" @click.prevent="openFileModal"><i class="cloud upload icon"></i>Fichier</button>
-                </div>
-
-            </div>
-
+            </form>
         </div>
 
         <!-- Progress Bar Upload File -->
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-
     import { mapGetters } from 'Vuex'
     import FileModal from './FileModal'
     import uuidV4 from 'uuid/V4'
@@ -48,7 +47,7 @@
                 errors: [],
                 storageRef: firebase.storage().ref(),
                 uploadTask: null,
-                uploadState: null
+                uploadState: null,
             }
         },
         computed : {
@@ -66,6 +65,9 @@
             }
         },
         methods: {
+            submit () {
+                this.sendMessage()
+            },
             sendMessage () { 
                 if(this.currentChannel !== null){
                     if(this.message.length > 0){
@@ -152,7 +154,6 @@
             }
         }
     }
-
 </script>
 
 <style scoped>
@@ -160,14 +161,8 @@
         position: fixed;
         bottom: 0;
         background-color:#232323;
-        padding: 10px;
-        padding-top: 20px;
-        height: 30%;
-        left: 300px;
-        right: 0;
-}
-.messages__form.big{
-    height: 350px;
+        width: 100%;
+        margin: 0 0 0 -30px;
 }
 .shortcut{
     color:white;

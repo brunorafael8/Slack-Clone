@@ -2,7 +2,8 @@
     <div>
         <div class="login__container ui middle aligned center aligned grid">
             <div class="column">
-                <h2 class="ui orange header">
+                <h2 class="ui header">
+                <img src="../assets/Slack_icons.svg" class="logo">
                 <div class="content">
                     Slack Clone
                 </div>
@@ -13,7 +14,7 @@
                     <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="name" placeholder="Seu nome" v-model.trim="name" required>
+                        <input type="text" name="name" placeholder="User" v-model.trim="name" required>
                     </div>
                     </div>
 
@@ -37,7 +38,7 @@
                     </div>
                     </div>
 
-                    <div class="ui fluid large orange submit button" @click.prevent="register" :class="{ 'loading': isLoading }" >Sign In</div>
+                    <button class="ui fluid large black submit button" @submit.prevent="register" @click.prevent="register" :class="{ 'loading': isLoading }" >Sign In</button>
                 </div>
 
                 <div class="ui error message" v-if="hasErrors">
@@ -125,6 +126,9 @@
                 if(this.password.length < 6|| this.password_confirmation.length < 6){
                     return false;
                 }
+                return true;
+            },
+            passwordValid2(){
                 if( this.password != this.password_confirmation){
                     return false;
                 }
@@ -132,11 +136,15 @@
             },
             isFormValid(){
                 if(this.isEmpty()){
-                    this.errors.push('Fill out the form completely')
+                    this.errors.push('Fill out the form!')
                     return false;
                 }
                 if(!this.passwordValid()){
-                    this.errors.push("The password is not correct")
+                    this.errors.push("Password must contain at least six characters!")
+                    return false
+                }
+                if(!this.passwordValid2()){
+                    this.errors.push("Please confirm your password!")
                     return false
                 }
                 return true;
@@ -147,8 +155,22 @@
 <style scoped>
     .login__container{
         margin-top: 40px;
+
     }
     .column{
         max-width: 450px;
+    }
+    .ui.header>.image:not(.icon), .ui.header>img{
+        height: 120px;
+        width: 120px;
+        margin: 0;
+        margin-right: -35px;
+    }
+    .ui.header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -40px;
+        color: #fff;
     }
 </style>

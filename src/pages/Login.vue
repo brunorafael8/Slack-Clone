@@ -2,7 +2,8 @@
         <div>
         <div class="login__container ui middle aligned center aligned grid">
             <div class="column">
-                <h2 class="ui orange header">
+                <h2 class="ui header">
+                <img src="../assets/Slack_icons.svg" class="logo">
                 <div class="content">
                     Slack Clone
                 </div>
@@ -24,7 +25,7 @@
                     </div>
                     </div>
 
-                    <div class="ui fluid large orange submit button" @click.prevent="login" :class="{ 'loading': isLoading }" >Login</div>
+                    <button class="ui fluid large black submit button" @submit.prevent="login" @click.prevent="login" :class="{ 'loading': isLoading }" >Login</button>
                 </div>
 
                 <div class="ui error message" v-if="hasErrors">
@@ -89,6 +90,19 @@
     }
     .column{
         max-width: 450px;
+    }
+    .ui.header>.image:not(.icon), .ui.header>img{
+        height: 120px;
+        width: 120px;
+        margin: 0;
+        margin-right: -35px;
+    }
+    .ui.header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -40px;
+        color: #fff;
     }
 
     
