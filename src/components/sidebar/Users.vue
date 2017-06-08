@@ -107,12 +107,14 @@
         cursor: pointer;
         padding: 4px;
         border-radius: 4px;
+        color: #ab9ba9
     }
     .users__container .feed:hover{
-        background: #654439;
+        background: #3e313c;
     }
     .users__container .feed.is_active{
-        background: #654439;
+        color: #fff;
+        background: rgba(0,158,195,1);
     }
     .connection__label{
         float:left!important;

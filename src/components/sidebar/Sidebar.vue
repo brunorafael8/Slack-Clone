@@ -1,7 +1,9 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar"> 
         <h1 class="ui inverted center aligned header">Slack Clone</h1> 
         <connected-user></connected-user>
+        <div class="ui divider"></div>
+      
         <channels></channels>
         <div class="ui divider"></div>
         <users></users>

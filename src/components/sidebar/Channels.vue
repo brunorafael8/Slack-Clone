@@ -1,7 +1,7 @@
 <template>
  <div class="channels__container">
         <h2 class="ui inverted center aligned header">Channels <i class="add square icon add_channel" @click="openChannelModal"></i></h2>
-        <div class="ui raised padded segment channels__list">
+        <div class="ui raised channels__list">
             <ul>
                 <li class="channels__item" 
                     v-for="channel in channels" 
@@ -120,31 +120,37 @@
     .channels__container ul{
         margin: 0;
         padding: 0;
+        background-color: #4d394b;
+    }
+    .raised{
+      background-color: #4d394b;  
     }
     .channels__item{
         height: 30px;
         margin: 8px;
         list-style: none;
-        background-color: #ca67ff;
+        background-color: #4d394b;
         cursor: pointer;
         line-height: 30px;       
         border-radius: 2px;
         padding-left: 12px;
         font-weight: bold;
         font-size: 1.1em;
+        color: #ab9ba9;
     }
     .channel__count{
         float:right;
     }
     .is_active{
-        background-color: #9740c5;
+        color: #fff;
+        background-color: rgba(0,158,195,1);
     }
     .channels__item:hover{
-        background-color: #9740c5;
+        background-color: #3e313c;
     }
     .add_channel{
         cursor: pointer;
-        color: #8BC34A;
+        color: #2ab27b;
     }
     .add_channel:hover{
         color: #689F38;

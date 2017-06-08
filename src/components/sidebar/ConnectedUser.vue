@@ -51,13 +51,12 @@
 <style scoped>
     .connectedUser__container{       
         position: absolute;
-        background-color: #3e2a23;
+        background-color: #4d394b;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         height: 90px;
         padding: 8px;
-        box-shadow: -4px 1px 8px 3px #2b1d18;
     }
 </style>

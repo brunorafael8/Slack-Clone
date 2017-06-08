@@ -167,4 +167,7 @@
 .shortcut{
     color:white;
 }
+.ui.small.progress{
+    width: 70%;
+}
 </style>
