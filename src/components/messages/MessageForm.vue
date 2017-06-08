@@ -141,9 +141,9 @@
             },
             getPath() {
                 if(this.isPrivate){
-                    return 'tchat/private/'+this.currentChannel.id
+                    return 'schat/private/'+this.currentChannel.id
                 }else{
-                    return 'tchat/public'
+                    return 'schat/public'
                 }
             }
         },

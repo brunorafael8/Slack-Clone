@@ -1,5 +1,15 @@
 {
   "hosting": {
-    "public": "dist"
+    "public": "dist",
+      "redirects": [ {
+      "source" : "/login",
+      "destination" : "/",
+      "type" : 301
+      },
+      {
+      "source" : "/register",
+      "destination" : "/",
+      "type" : 302
+    }]
   }
 }
